@@ -41,7 +41,8 @@ model.eval()
 
 model1_path = "emotion_data_final.pth"
 model1 = SimpleCNN(output=7)
-model1.load_state_dict(torch.load(model1_path,map_loacation=torch.device('cpu')))
+model1.load_state_dict(torch.load(model1_path, map_location=torch.device('cpu')))
+model1.eval()
 
 # Image Transformation
 transform = transforms.Compose([
