@@ -4,7 +4,7 @@ from torch import nn
 import torch.nn.functional as F
 from PIL import Image
 from torchvision import transforms
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Streamlit Title
 st.header("IMAGE CAPTURE EMOTIONS")
