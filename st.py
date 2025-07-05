@@ -71,7 +71,7 @@ if uploaded_file is not None:
             with col1:
                 st.image(uploaded_file, caption="Original Image", width=200)
             with col2:
-                st.subheader("Predicted Emotion")
+                st.subheader("Predicted Emotion model 1")
                 st.write(f"Top Emotion: **{emotions[top_indices[0][0]]}**")
 
                 st.subheader("Top 3 Probabilities")
@@ -88,7 +88,7 @@ if uploaded_file is not None:
             with col1:
                 st.image(uploaded_file, caption="Original Image", width=200)
             with col2:
-                st.subheader("Predicted Emotion")
+                st.subheader("Predicted Emotion model 2")
                 st.write(f"Top Emotion: **{emotions[top_indices1[0][0]]}**")
 
                 st.subheader("Top 3 Probabilities")
