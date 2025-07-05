@@ -81,20 +81,20 @@ if uploaded_file is not None:
                     st.write(f"{emotion_label}: {probability:.4f}")
             # Predict2
             output1 = model1(image)
-            probs = torch.softmax(output, dim=1)
-            top_probs, top_indices = torch.topk(probs, k=3)
+            probs1 = torch.softmax(output1, dim=1)
+            top_probs1, top_indices1 = torch.topk(probs1, k=3)
 
             col1, col2 = st.columns(2)
             with col1:
                 st.image(uploaded_file, caption="Original Image", width=200)
             with col2:
                 st.subheader("Predicted Emotion")
-                st.write(f"Top Emotion: **{emotions[top_indices[0][0]]}**")
+                st.write(f"Top Emotion: **{emotions[top_indices1[0][0]]}**")
 
                 st.subheader("Top 3 Probabilities")
                 for i in range(3):
-                    emotion_label = emotions[top_indices[0][i]]
-                    probability = top_probs[0][i].item()
+                    emotion_label = emotions[top_indices1[0][i]]
+                    probability = top_probs1[0][i].item()
                     st.write(f"{emotion_label}: {probability:.4f}")
 
     except Exception as e:
